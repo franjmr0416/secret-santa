@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { supabaseClient } from '../services/supabase'
+import Navbar from './Navbar'
 
 export interface MainLayoutProps {
   children: ReactNode
@@ -8,7 +8,7 @@ export interface MainLayoutProps {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div>
-      <button onClick={() => supabaseClient.auth.signOut()}>Logout</button>
+      <Navbar />
       {children}
     </div>
   )
